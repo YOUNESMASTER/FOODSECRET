@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODSECRET</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
+</head>
+<body>
+    <section id="header">
+        <!-- transparent background header -->
+        <div class="transparent"> 
+
+        </div>
+        <div class="nav-header">
+            <a id="bars" onclick="afficher()"><i class="fa-solid fa-bars"></i></a>
+            <a id="logo" href="index.html"><span>F</span>ood<span>S</span>ecret</a>
+            <div class="navbar">
+              <a href="#home"><i style="margin-right:2px;" class="fa-solid fa-house"></i>Home</a>
+              <a href="#services"><i  style="margin-right:2px;" class="fa-solid fa-briefcase"></i>Services</a>
+              <a href="#team"><i class="fa-solid fa-people-group"></i>Team</a>
+              <a href="#contact"><i style="margin-right:2px;" class="fa-solid fa-envelope"></i>Contact</a>
+            </div>
+        </div>
+       
+
+       <div class="title">
+        <h1>Bienvenue dans le <span>meilleur</span> site de coaching <span>nutrition </span>&&<span> fitness</span></h1>
+        <h2>Votre santé nous instéresse !</h2>
+        <button>Voir plus</button>
+       </div>
+       
+       <!-- mobile screen start -->
+       <div id="menubar">
+         <a id="xmark" onclick="fermer()" ><i class="fa-solid fa-xmark"></i></a>
+         <a href="#home"><i style="margin-right:2px;" class="fa-solid fa-house"></i>Home</a>
+         <a href="#services"><i  style="margin-right:2px;" class="fa-solid fa-briefcase"></i>Services</a>
+         <a href="#team"><i class="fa-solid fa-people-group"></i>Team</a>
+         <a href="#contact"><i style="margin-right:2px;" class="fa-solid fa-envelope"></i>Contact</a>
+         <div class="socials-menu">
+            <h6>Suivez-nous Sur:</h6>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+         </div>
+       </div>
+       <div id="socheader" class="socials-menu">
+        <h6>Suivez-nous Sur:</h6>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-twitter"></i>
+     </div>
+     <!-- mobile screen end -->
+    </section>
+
+      <section id="services">
+        <h1>Services We Offer</h1>
+        <h5>Votre santé nous instéresse !</h5>
+           <div class="row">
+            <!-- COL1 -->
+            <div class="colomn">
+                <h2>Compteur de calories</h2>
+               <P>Profitez du compteur de calories le plus rapide et pratique dans tout le web</P>
+               <button>Gratuit</button>
+            </div>
+            <!-- col2 -->
+            <div class="colomn">
+                <h2>Programme alimentaire</h2>
+                <p>Plus de 50 programmes alimentaires différents de bonne qualité nutritive pour une vie saine !</p>
+                <button>Decouvrir</button>
+            </div>
+            <!-- COL3 -->
+            <div class="colomn">
+                <h2>Coaching en ligne </h2>
+                <p>coaching et suivie quotidien du client a distance via les differents reseau sociaux ! </p>
+                <button>Decouvrir</button>
+            </div>
+           </div>
+      </section>
+<!-- Team section -->
+       <section id="team">
+        <h1>Our Team</h1>
+        <h5>Une equipe de haut niveau pour votre disposition !</h5>
+        
+               <!-- card1 -->
+            <div class="card">
+                <div class="layer">
+                </div>
+                <div class="img-container">
+                    <img src="images/card1.jpg" alt="">
+                </div>
+                <div class="details">
+                    <a href="#">Martin Fulbaster</a>
+                    <h3>Coach sportif</h3>
+                </div>
+            </div>
+               <!-- card2 -->
+            <div class="card">
+                <div class="layer">
+                </div>
+                <div class="img-container">
+                    <img src="images/card2.png" alt="">
+                </div>
+                <div class="details">
+                    <a href="#">Younes Khouna</a>
+                    <h3>Fondateur de Foodsecret</h3>
+                </div>
+            </div>
+                    <!-- card3 -->
+            <div class="card card3">
+                <div class="layer">
+                </div>
+                <div class="img-container">
+                    <img src="images/card3.jpg" alt="">
+                </div>
+                <div class="details">
+                    <a href="#">Lucy Heartfilia</a>
+                    <h3>Coach sportif</h3>
+                </div>
+            </div>
+       </section>
+       <section id="contact">
+        <h1>Get In touch</h1>
+        <div class="cards-contact">
+            <form method="post" action="index.php">
+                <div class="field">
+                    <label for="nom">Nom:</label>
+                    <input type="text" name="nom" id="nom">
+                   
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    
+                </div>
+             <div class="field">
+                <label for="message">Votre message:</label>
+               <input type="text" id="message" name="message">
+             </div> 
+             <button type="submit" id="submit" name="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+<!-- JS SCRIPT  -->
+<script>
+    // SLIDER START
+    let myheader=document.getElementById("header");
+    const mysources=["linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/back0.jpg')","linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/back1.jpg')","linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/back2.jpg')","linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/back3.jpg')"];
+    let counter=1;
+    function slider(){
+         myheader.style.backgroundImage=mysources[counter];
+         counter++;
+         if(counter>3){
+            counter=0;
+         }
+    }
+    setInterval(slider,6000);
+    //SLIDER END//
+    //menubar display start//
+    let bars=document.getElementById("bars");
+    let xmark=document.getElementById('xmark');
+    let menubar=document.getElementById("menubar");
+    let title=document.querySelector(".title");
+    let socialsmenu=document.querySelector('#menubar .socials-menu');
+    socialsheader=document.getElementById('socheader');
+    function afficher(){
+        xmark.style.visibility="visible";
+        bars.style.visibility="hidden";
+        menubar.style.visibility="visible";
+        
+        title.style.visibility="hidden";
+        socialsmenu.style.visibility="visible";
+        socialsheader.style.visibility="hidden";
+    }
+    function fermer(){
+        socialsheader.style.visibility="visible";
+        xmark.style.visibility="hidden";
+        bars.style.visibility="visible";
+        menubar.style.visibility="hidden";
+        title.style.visibility="visible"; 
+        socialsmenu.style.visibility="hidden";
+    }
+    //menubar display end//
+</script>
+
+
+</body>
+</html>

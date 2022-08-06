@@ -1,0 +1,631 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.nav-header{
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    min-height: 70px;
+    /* background-color: black;
+    opacity: 0.7; */
+}
+.transparent{
+    position: absolute;
+    width: 100%;
+    height:80px;
+    background-color: black;
+    opacity: 0.5;
+}
+#header{
+    transition: 1s;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/back0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#logo{
+    position: absolute;
+    top:0%;
+    left:3%;
+    font-size: 40px;
+    color: white;
+    opacity: 0.8;
+    font-style: italic;
+    font-weight: bold;
+}
+.navbar{
+    position: absolute;
+    top:3%;
+    color: #fff;
+    right: 3%;
+}
+.navbar a{
+    color: #fff;
+    opacity: 0.8;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    margin-left: 25px;
+}
+
+.navbar a:hover{
+    opacity: 1;
+    border-bottom: 1px solid greenyellow;
+}
+#logo:hover{
+    opacity: 1;
+    border-bottom: 1px solid greenyellow;
+}
+#logo span{
+    color: greenyellow;
+    font-size: 50px;
+    font-weight: 900;
+    animation: shade 0.7s infinite;
+}
+@keyframes shade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#menubar{
+    background: #000;
+    opacity: 0.5;
+    visibility: hidden;
+    top:-5%;
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+.socials-menu{
+    /* visibility: hidden; */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.socials-menu h6{
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.socials-menu i{
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.87;
+    cursor: pointer;
+    margin-left: 30px;
+}
+#menubar a{
+    opacity: 0.87;
+    font-size: 45px;
+    color: #fff;
+    margin-top: 50px;
+}
+#menubar a:hover{
+    opacity: 1;
+    color: greenyellow;
+    border-bottom: 1px solid greenyellow;
+}
+.socials-menu i:hover{
+    color: greenyellow;
+    opacity: 1;
+    transform: scale(1.2);
+}
+.title{
+    position: absolute;
+    width: 90%;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    line-height: 1.7;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.title h1{
+    font-size: 40px;
+    font-weight: 700;   
+    animation: shade 2s;
+}
+.title h1 span{
+    color: greenyellow;
+    font-weight: 900;
+    font-size: 45px;
+    text-shadow: 0.5px 0.5px 2px #fff,-0.5px -0.5px 2px #fff;
+    animation: shade 2s;
+}
+.title h2{
+    font-size: 20px;
+    animation: shade 2s;
+}
+.title button:hover{
+    transform: scale(1.1);
+}
+.title button{
+    animation: shade 2s;
+    width: 140px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+    background: transparent;
+    color: greenyellow;
+    box-shadow: 4px 4px 10px #fff,-4px -4px 10px #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#menubar .socials-menu{
+    visibility: hidden;
+} 
+#bars,#xmark{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 35px;
+    color: #fff;
+    opacity: 0.87;
+    visibility: hidden;
+    z-index: 100;
+    animation: shade 1s;
+}
+#xmark{
+    top:10%;
+    right: 5%;
+}
+
+/* Responsive header home */
+@media (max-width:1170px){
+    
+    .title h1{
+        font-size:33px ;
+    }
+   .title h2{
+    font-size: 15px;
+   }
+   .navbar a{
+    font-size: 25px;
+   }
+}
+@media (max-width:963px){
+     .title{
+        top:27%
+    }
+    .title h1{
+        font-size:27px ;
+    }
+    .title h1 span{
+        font-size: 30px;
+    }
+   .title h2{
+    font-size: 15px;
+   }
+   .navbar a{
+    margin-left: 18px;
+    font-size: 20px;
+   }
+   #logo{
+    top:-1%;
+   }
+}
+/* @media (max-width:800px){
+    #logo{
+        font-size: 30px;
+        top: 1%;
+    }
+    #logo span{
+        font-size: 35px;
+    } */
+
+@media(max-width:730px){
+    .navbar{
+        display: none;
+    }
+    #bars{
+        visibility: visible;
+    }
+}
+@media (max-width:551px){
+    
+    .title h1{
+        
+        font-size:25px ;
+    }
+    .title h1 span{
+        font-size: 28px;
+    }
+   .title h2{
+    font-size: 14px;
+   }
+}
+@media (max-width:551px){
+    
+    .title h1{
+        
+        font-size:21px ;
+    }
+    .title h1 span{
+        font-size: 25px;
+    }
+   .title h2{
+    font-size: 11px;
+   }
+}
+@media (max-width:500px){
+    .socials-menu i{
+        font-size: 15px;
+        margin-left: 8px;
+    }
+}
+@media (max-width:400px){
+    #menubar a{
+        font-size: 35px;
+    }
+    #logo{
+        top: 1%;
+        font-size: 28px;
+    }
+    #logo span{
+        font-size: 33px;
+    }
+}
+/* section services */
+#services{
+    margin: auto;
+    width: 90%;
+    height: 600px;
+    padding-top: 100px;
+    
+    text-align: center;
+}
+.row{
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.colomn{
+    box-sizing: border-box;
+    margin-bottom: 9%;
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 5px;
+    height: 250px;
+   cursor: pointer;
+}
+.colomn:hover{
+    box-shadow: 1px 1px 10px#999,-1px -1px 10px  rgb(163, 153, 153);
+}
+#services h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 800;
+}
+#services h5{
+    color: rgb(100, 99, 99);
+    margin-bottom: 4%;
+}
+.colomn h2{
+    padding: 8px;
+    margin-top: 3%;
+   font-style: italic;
+}
+.colomn p{
+    color: rgb(100, 99, 99);
+    font-size: 15px;
+    margin-top: 4%;
+    padding: 8px;
+}
+.colomn button{
+    margin-top: 8%;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    background: lightcoral;
+    color: #fff;
+    box-shadow: 1px 1px 5px #fff, -1px -1px 5px #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* responsive service section */
+@media(max-width:900px){
+    .colomn button{
+        transform: scale(0.8);
+    }
+}
+@media (max-width:700px){
+    #services{
+        height: 900px;
+    }
+    #services .row{
+        flex-direction: column;
+    }
+    #services .colomn button{
+        margin-top: 3%;
+    }
+    #services .colomn{
+        padding-bottom: 20px;
+    }
+    
+}
+/* end responsive services !! */
+/* plan 
+ -1) pratiquer sur foodsecret
+ -2) udemy dev a z
+ 3) commencer notre projet
+ 4) finir notre projet avant 15septembre nchaelah
+
+*/
+#team{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+   
+    /* align-items: center; */
+    text-align: center;
+}
+#team h1{
+    position: absolute;
+    top:1%;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 800;
+}
+#team h5{
+    position: absolute;
+    top:13%;
+    color: rgb(100, 99, 99);
+    margin-bottom: 4%;
+}
+
+.card{
+
+    background: whitesmoke;
+     cursor: pointer;
+     position: relative;
+     width: 250px;
+     height: 300px;
+     margin-right: 4%;
+     border-radius: 5px;
+     box-shadow: 3px 3px 5px #999,-3px -3px 5px #999;
+     margin-top: 200px;
+    }
+.img-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+.img-container img{
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+}
+.details{
+    line-height: 1.8;
+    position: absolute;
+    bottom: 0;
+    background:whitesmoke;
+    padding: 5px;
+    width: 100%;
+    height: 30%;
+}
+.details a{
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0.5px 0.5px 1px #999,-0.5px -0.5px 1px #999;
+}
+.details a:hover{
+    text-decoration: underline;
+}
+.details h3{
+    font-size: 17px;
+}
+/* layer start  */
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 99;
+}
+.layer:hover{
+    background: rgb(206, 85, 85);
+    opacity: 0.5;
+}
+/* layer end */
+@media (min-width:550px) and (max-width:1100px){
+    #team{
+        height: 1000px;
+    }    
+    .card3{
+            position: absolute;
+            bottom: 13%;
+          
+    }
+    #team h1{
+        top: 7%;
+    }
+        
+        
+}
+@media(max-width:550px){
+    #team{
+        flex-direction: column;
+        height: 1300px;
+        align-items: center;
+    }
+    .card{
+        margin-right: 0;
+        margin-top: 25px;
+    }
+    #team h1{
+        top:4%;
+    }
+    #team h5{
+        top:10%;
+    }
+    /* layer just for pc screen not for mobiles */
+    .layer{ 
+        display: none;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+}
+/* Section conatct */
+#contact{
+    position: relative;
+    height: 550px;
+    width: 100%;
+    background: linen;}
+#contact h1{
+    position: absolute;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+}
+.cards-contact{
+    position: absolute;
+    top:0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 40%;
+    height: 63%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 10px #999,-3px -3px 10px #999;
+}
+.field{
+     width: 100%;
+     margin-top:25px;
+     border-bottom: 1px solid black;
+
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+label:hover{
+    color: lightcoral;
+}
+.field input{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+#submit:hover{
+    transform: scale(1.1);
+}
+#message{
+    height: 70px;
+}
+#submit{
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    background: lightcoral;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+@media(max-width:900px){
+    .cards-contact{
+        width: 50%;
+    }
+  }
+  @media(max-width:750px){
+      #contact h1{
+          font-size: 39px;
+      }
+    .cards-contact{
+        width: 60%;
+    }
+  }
+  @media(max-width:550px){
+    #contact h1{
+        font-size: 30px;
+    }
+  .cards-contact{
+      width: 75%;
+  }
+}
+@media(max-width:450px){
+    #contact h1{
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+  .cards-contact{
+      width: 85%;
+  }
+  label{
+      margin-left: 8px;
+      font-size: 15px;
+  }
+  .field{
+    width: 90%;
+    margin-top:15px;
+    border-bottom: 1px solid black;
+
+}
+#message{
+    height: 30px;
+}
+.cards-contact{
+    height: 50%;
+}
+}
+
+
+
